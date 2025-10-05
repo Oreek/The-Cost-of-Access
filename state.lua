@@ -175,7 +175,7 @@ function State:advanceLevel()
     for k,v in pairs(level4FS()) do self.files[k] = v end
     self.t:println("SYSTEM: Identity enforcement active.")
   elseif self.level >= 5 then
-    self.t:println("RELEASE PROTOCOL READY: purge entity7 | release entity7 | merge entity7")
+    self.t:println("RELEASE PROTOCOL READY: purge entity67 | release entity67 | merge entity67")
   end
   saveToDisk({ level=self.level, files=self.files, commands=self.commands, name=self.name, flags=self.flags, ended=self.ended })
   self.t:prompt()
@@ -382,15 +382,15 @@ Day 9: Failure meant sacrifice. But whose??]]
   elseif cmd == "purge" or cmd == "release" or cmd == "merge" then
     if self.level < 5 then
       self.t:println("PROTOCOL LOCKED. Progress further.")
-      self.t:prompt()
-      return
-    end
-    local target = parts[2] and parts[2]:lower()
-    if target ~= "entity7" then
-      self.t:println("Unknown target. Try one of: purge entity67 | release entity67 | merge entity67")
-      self.t:prompt()
-      return
-    end
+        self.t:prompt()
+        return
+      end
+      local target = parts[2] and parts[2]:lower()
+      if target ~= "entity67" then
+        self.t:println("Unknown target. Try one of: purge entity67 | release entity67 | merge entity67")
+        self.t:prompt()
+        return
+      end
     if cmd == "purge" then
       self:tEndingCold()
     elseif cmd == "release" then
@@ -414,10 +414,10 @@ end
 function State:tEndingCold()
   self.t:println("Executing: PURGE ENTITY-67...")
   self.t:glitchText("ENTITY-67: I- I don't want blame you... I just don't want to diE@#$%%#@#{&", 1.5, 2)
-  self.t printIn("")
-  self.t printIn("")
-  self.t printIn("")
-  self.t:println("Sysytem restored.")
+  self.t:println("")
+  self.t:println("")
+  self.t:println("")
+  self.t:println("System restored.")
   self.ended = true
   saveToDisk({ level=self.level, files=self.files, commands=self.commands, name=self.name, flags=self.flags, ended=self.ended })
 end

@@ -1,3 +1,5 @@
+-- AI has been used in this specific file for base development of the design
+
 local utf8 = require("utf8")
 local Terminal = {}
 Terminal.__index = Terminal

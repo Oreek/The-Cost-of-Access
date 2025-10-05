@@ -11,9 +11,9 @@ local boot = {
   lines = {
     "PRISMIUM BIOS v2.7",
     "Memory Check.................... OK",
-    "Storage: VIRELIA_DISK_01........ OK",
+    "Storage: PRISMIUM_DISK_01........ OK",
     "Initializing containment kernel...",
-    "Warning: ENTITY-7 residual signals detected",
+    "Warning: ENTITY-67 residual signals detected",
     "Loading PRISMIUM_OS...",
   },
   idx = 1,
@@ -47,7 +47,7 @@ function love.update(dt)
         term:println("")
         term:println("PRISMIUM_OS CONSOLE READY.")
         term:println("Type 'help' to list commands.")
-        term printIn("")
+        term:println("")
         term:prompt()
       end
     end
