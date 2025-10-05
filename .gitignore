@@ -1,0 +1,9 @@
+*.love
+*.zip
+*.rar
+*.7z
+
+.vscode/
+dist/
+
+*.luac

@@ -1,10 +1,11 @@
+-- Config wizardry: where we decide how big the vibes are and what the window is called
 function love.conf(t)
   t.identity = "PRISMIUM_OS"
   t.appendidentity = false
-  t.version = "67.7"
+  t.version = "11.5"
   t.console = false
-  t.window.title = "PRISMIUM_OS: The Cost of Access"
-  t.window.width = 960
+  t.window.title = "PRISMIUM_OS: The Cost of Access" -- dramatic title for dramatic choices
+  t.window.width = 1080
   t.window.height = 720
   t.window.vsync = 1
   t.window.msaa = 0
